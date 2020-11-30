@@ -1,2 +1,1 @@
-# teste_miio
-Test for back-end on miio
+# Test for back-end on miio

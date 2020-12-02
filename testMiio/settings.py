@@ -80,15 +80,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'testMiio.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'bezkoder_db',
-        'HOST': 'cluster0.ev1b5.mongodb.net',
-        'PORT': 27017,
+        'NAME': 'django_mongodb_docker',
+        'CLIENT': {
+            'host': 'mongodb://mongodb:27017',
+            'username': 'root',
+            'password': 'mongoadmin',
+            'authSource': 'admin',
+            'authMechanism': 'SCRAM-SHA-1',
+        }
     }
 }
 
